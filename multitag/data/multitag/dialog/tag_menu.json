@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Tag Panel",
+    "color": "aqua",
+    "bold": true,
+    "underlined": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Selecciona qué deseas modificar:",
+        "italic": true
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": "Prefix",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "multitag:tag_prefix"
+      }
+    },
+    {
+      "label": "Suffix",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "multitag:tag_suffix"
+      }
+    }
+  ],
+  "exit_action": {
+    "label": "Salir"
+  }
+}

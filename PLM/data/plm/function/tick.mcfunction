@@ -1,0 +1,1 @@
+execute as @a[scores={plm-change-pranklv=1}] run function plm:triggers/change-pranklv

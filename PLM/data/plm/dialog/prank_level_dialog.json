@@ -1,0 +1,53 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Prank Level Manager",
+    "color": "green",
+    "bold": true,
+    "underlined": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Cambia tu nivel de pranks desde aqui. Desliza la barra para ajustar el nivel a tu gusto. Ten en cuenta que el cambio tarda 5 horas en aplicarse."
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Puedes salir de este menu usando la tecla",
+        "extra": [
+          {
+            "text": " ESC",
+            "color": "yellow",
+            "bold": true,
+            "italic": true
+          },
+          ". Eso cancelara la operacion"
+        ],
+        "color": "gray",
+        "italic": true
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "type": "minecraft:number_range",
+      "key": "prank_level",
+      "label": "Nivel",
+      "start": 1,
+      "end": 4,
+      "step": 1,
+      "initial": 1
+    }
+  ],
+  "can_close_with_escape": true,
+  "actions": [
+    {
+      "label": "Aplicar",
+      "action": {
+        "type": "minecraft:dynamic/run_command",
+        "template": "function plm:start {prank_level:$(prank_level)}"
+      }
+    }
+  ]
+}

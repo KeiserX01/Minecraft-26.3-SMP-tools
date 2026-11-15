@@ -1,0 +1,1 @@
+execute as @a[team=] run function dyn-macros:start
