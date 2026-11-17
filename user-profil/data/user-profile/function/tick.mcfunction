@@ -1,0 +1,1 @@
+execute as @a[scores={profile=1..}] run function user-profile:trigger/open-gui

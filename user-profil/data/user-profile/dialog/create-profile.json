@@ -1,0 +1,81 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Crear perfil",
+    "color": "gold",
+    "bold": true,
+    "underlined": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "¡Bienvenido! Esta es la interfaz para crear tu perfil dentro del servidor.  La información que compartas será visible para todos los jugadores, así que procura completar todos los campos y presentar tus datos de forma clara y adecuada.  No te preocupes si cometes algún error: podrás volver a acceder a este menú y recrear tu perfil siempre que lo necesites.  Recuerda mantener la información actualizada, respetar las normas del servidor y expresarte de manera apropiada.",
+        "color": "gray"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Puedes cancelar esta operacion utilizando la tecla ",
+        "extra": [
+          {
+            "text": "ESC",
+            "color": "yellow"
+          }
+        ],
+        "color": "gray",
+        "italic": true
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "type": "minecraft:text",
+      "key": "base_cords",
+      "label": {
+        "text": "Cordenadas de tu base"
+      }
+    },
+    {
+      "type": "minecraft:text",
+      "key": "birthday",
+      "label": {
+        "text": "Fecha de cumpleaños",
+        "extra": [
+          {
+            "text": " (opcional)",
+            "color": "gray"
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:text",
+      "key": "portal_cords",
+      "label": "Cordenadas de tu portal en el nether"
+    },
+    {
+      "type": "minecraft:text",
+      "key": "discord",
+      "label": {
+        "text": "Tu discord",
+        "extra": [
+          {
+            "text": " (opcional)",
+            "color": "gray"
+          }
+        ]
+      }
+    }
+  ],
+  "actions": [
+    {
+      "label": "Aplicar",
+      "action": {
+        "type": "minecraft:dynamic/run_command",
+        "template": "function user-profile:macros/start {base_cords:'$(base_cords)',birthday:'$(birthday)',portal_cords:$(portal_cords),discord:'$(discord)'"
+      }
+    }
+  ]
+}

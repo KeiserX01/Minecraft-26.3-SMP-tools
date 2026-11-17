@@ -1,3 +1,4 @@
+# team
 data modify storage multitag:runtime team_id set value 0
 execute store result storage multitag:runtime team_id int 1 run data get entity @s UUID[0]
 data modify storage multitag:runtime prefix set from storage multitag:config default.prefix

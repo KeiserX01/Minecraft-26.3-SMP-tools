@@ -1,0 +1,7 @@
+{
+  "pack": {
+    "description": "User Profile Manager - custom profiles for minecraft players",
+    "min_format": [121, 0],
+    "max_format": [121, 0]
+  }
+}
