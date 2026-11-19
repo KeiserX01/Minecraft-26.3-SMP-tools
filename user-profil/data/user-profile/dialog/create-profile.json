@@ -69,12 +69,20 @@
       }
     }
   ],
+  "can_close_with_escape": false,
   "actions": [
     {
       "label": "Aplicar",
       "action": {
         "type": "minecraft:dynamic/run_command",
         "template": "function user-profile:macros/start {base_cords:\"$(base_cords)\",birthday:\"$(birthday)\",portal_cords:\"$(portal_cords)\",discord:\"$(discord)\"}"
+      }
+    },
+    {
+      "label": "Cancelar",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function user-profile:macros/deop/start"
       }
     }
   ]

@@ -1,4 +1,5 @@
 $data modify storage multitag:runtime suffix set value $(suffix)
+data modify storage multitag:runtime prefix set from storage multitag:config default.prefix
 $execute as @a[name="$(target)"] run function multitag:admin/apply_suffix with entity @s
 
 $data modify storage multitag:runtime target set value $(target)

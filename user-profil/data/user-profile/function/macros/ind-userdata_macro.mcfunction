@@ -11,4 +11,4 @@ $data modify storage user-profile:user$(macro_id) birthday set value "$(birthday
 $data modify storage user-profile:user$(macro_id) discord set value "$(discord)"
 $data modify storage user-profile:user$(macro_id) user_id set value "$(macro_id)"
 
-#$function user_profile:macros/prefix-dialog with storage user_profile:user$(macro_id)
+$function user-profile:macros/prefix-dialog with storage user-profile:user$(macro_id)

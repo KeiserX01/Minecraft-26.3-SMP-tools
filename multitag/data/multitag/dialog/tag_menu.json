@@ -31,7 +31,7 @@
       }
     },
     {
-      "label": "Añadir Sufix",
+      "label": "Añadir Suffix",
       "action": {
         "type": "minecraft:show_dialog",
         "dialog": "multitag:tag_add_suffix"
