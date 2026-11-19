@@ -17,17 +17,24 @@
   ],
   "actions": [
     {
-      "label": "Prefix",
+      "label": "Establecer Prefix",
       "action": {
         "type": "minecraft:show_dialog",
         "dialog": "multitag:tag_prefix"
       }
     },
     {
-      "label": "Suffix",
+      "label": "Establecer Suffix",
       "action": {
         "type": "minecraft:show_dialog",
         "dialog": "multitag:tag_suffix"
+      }
+    },
+    {
+      "label": "Añadir Sufix",
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "multitag:tag_add_suffix"
       }
     }
   ],

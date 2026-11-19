@@ -1,0 +1,242 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Tag Panel",
+    "color": "aqua",
+    "bold": true,
+    "underlined": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "━━━━━━Añadir Suffix━━━━━━",
+        "color": "gold"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Esta función es distinta de `Establecer Suffix`. Para añadir un sufijo a un jugador, primero debe tener uno asignado; usa `Establecer Suffix` antes de llamar a esta función. Si no lo haces, puede producirse un error o el sufijo del jugador puede comportarse de forma inesperada.",
+        "color": "gray"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": {
+        "text": "Puedes usar ",
+        "extra": [
+          {
+            "text": "ESC ",
+            "color": "yellow"
+          },
+          {
+            "text": "para salir de este menu y cancelar la operacion",
+            "color": "gray"
+          }
+        ],
+        "color": "gray"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "type": "minecraft:text",
+      "key": "target",
+      "label": {
+        "text": "Nombre del jugador",
+        "italic": true
+      }
+    },
+    {
+      "type": "minecraft:text",
+      "key": "suffix_text",
+      "label": {
+        "text": "Nuevo Suffix"
+      }
+    },
+    {
+      "type": "minecraft:single_option",
+      "key": "suffix_color",
+      "label": {
+        "text": "Color"
+      },
+      "options": [
+        {
+          "id": "white",
+          "display": {
+            "text": "Blanco",
+            "color": "white"
+          },
+          "initial": true
+        },
+        {
+          "id": "black",
+          "display": {
+            "text": "Negro",
+            "color": "black"
+          }
+        },
+        {
+          "id": "dark_blue",
+          "display": {
+            "text": "Azul Oscuro",
+            "color": "dark_blue"
+          }
+        },
+        {
+          "id": "dark_green",
+          "display": {
+            "text": "Verde Oscuro",
+            "color": "dark_green"
+          }
+        },
+        {
+          "id": "dark_aqua",
+          "display": {
+            "text": "Aqua Oscuro",
+            "color": "dark_aqua"
+          }
+        },
+        {
+          "id": "dark_red",
+          "display": {
+            "text": "Rojo Oscuro",
+            "color": "dark_red"
+          }
+        },
+        {
+          "id": "dark_purple",
+          "display": {
+            "text": "Púrpura Oscuro",
+            "color": "dark_purple"
+          }
+        },
+        {
+          "id": "gold",
+          "display": {
+            "text": "Oro",
+            "color": "gold"
+          }
+        },
+        {
+          "id": "gray",
+          "display": {
+            "text": "Gris",
+            "color": "gray"
+          }
+        },
+        {
+          "id": "dark_gray",
+          "display": {
+            "text": "Gris Oscuro",
+            "color": "dark_gray"
+          }
+        },
+        {
+          "id": "blue",
+          "display": {
+            "text": "Azul",
+            "color": "blue"
+          }
+        },
+        {
+          "id": "green",
+          "display": {
+            "text": "Verde",
+            "color": "green"
+          }
+        },
+        {
+          "id": "aqua",
+          "display": {
+            "text": "Aqua",
+            "color": "aqua"
+          }
+        },
+        {
+          "id": "red",
+          "display": {
+            "text": "Rojo",
+            "color": "red"
+          }
+        },
+        {
+          "id": "light_purple",
+          "display": {
+            "text": "Púrpura",
+            "color": "light_purple"
+          }
+        },
+        {
+          "id": "yellow",
+          "display": {
+            "text": "Amarillo",
+            "color": "yellow"
+          }
+        }
+      ]
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "bold",
+      "label": {
+        "text": "Negrita",
+        "bold": true
+      }
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "italic",
+      "label": {
+        "text": "Cursiva",
+        "italic": true
+      }
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "underlined",
+      "label": {
+        "text": "Subrrayado",
+        "underlined": true
+      }
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "strikethrough",
+      "label": {
+        "text": "Tachado",
+        "strikethrough": true
+      }
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "obfuscated",
+      "label": {
+        "text": "Ofuscado ()",
+        "hover_event": {
+          "action": "show_text",
+          "value": {
+            "text": "Se ve asi",
+            "extra": [
+              {
+                "text": "Estoy ofuscado",
+                "obfuscated": true
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "can_close_with_escape": true,
+  "actions": [
+    {
+      "label": "Aplicar Cambios",
+      "action": {
+        "type": "minecraft:dynamic/run_command",
+        "template": "function multitag:admin/add/suffix {target:\"$(target)\",new_suffix:{text:\"$(suffix_text)\",color:\"$(suffix_color)\",bold:$(bold),italic:$(italic),underlined:$(underlined),strikethrough:$(strikethrough),obfuscated:$(obfuscated)}}"
+      }
+    }
+  ]
+}
