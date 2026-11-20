@@ -9,6 +9,9 @@ $data modify storage user-profile:user$(macro_id) nickname set value $(nickname)
 $data modify storage user-profile:user$(macro_id) portal_cords set value "$(portal_cords)"
 $data modify storage user-profile:user$(macro_id) birthday set value "$(birthday)"
 $data modify storage user-profile:user$(macro_id) discord set value "$(discord)"
-$data modify storage user-profile:user$(macro_id) user_id set value "$(macro_id)"
+$data modify storage user-profile:user$(macro_id) macro_id set value "$(macro_id)"
+$data modify storage user-profile:user$(macro_id) UUID set value "$(UUID)"
+say "save userdata"
+
 
 $function user-profile:macros/prefix-dialog with storage user-profile:user$(macro_id)

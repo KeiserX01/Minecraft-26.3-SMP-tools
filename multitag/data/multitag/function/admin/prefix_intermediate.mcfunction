@@ -1,1 +1,1 @@
-$execute as @s run function multitag:admin/apply_prefix with storage multitag:user$(user_id)
+$execute as @s run function multitag:admin/apply_prefix with storage multitag:user$(macro_id)

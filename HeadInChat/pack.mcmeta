@@ -1,9 +1,0 @@
-{
-    "pack": {
-        "pack_format": 71,
-        "description": "Vanilla datapack to add player heads in chat, no resource pack needed",
-        "supported_formats": [71,88],
-        "min_format": 71,
-        "max_format": 88
-    }
-}

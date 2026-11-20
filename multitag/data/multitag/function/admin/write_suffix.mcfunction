@@ -1,1 +1,1 @@
-$team modify $(team_id) suffix $(suffix)
+$team modify $(macro_id) suffix $(suffix)

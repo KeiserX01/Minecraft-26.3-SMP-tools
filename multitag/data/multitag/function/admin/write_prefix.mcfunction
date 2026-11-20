@@ -1,1 +1,1 @@
-$team modify $(user_id) prefix [{object:player,player:{id:$(UUID)}},text:" ",$(prefix)]
+$team modify $(macro_id) prefix [{object:player,player:{id:$(UUID)}},$(prefix)]

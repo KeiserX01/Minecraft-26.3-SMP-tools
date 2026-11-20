@@ -1,3 +1,1 @@
-#execute store result storage multitag:runtime team_id int 1 run data get entity @s UUID[0]
-$function multitag:admin/write_prefix with storage multitag:user$(user_id)
-#data modify storage multitag:runtime team_id set value 0
+$function multitag:admin/write_prefix with storage multitag:user$(macro_id)
