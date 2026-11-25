@@ -1,6 +1,8 @@
-$data modify storage multitag:runtime suffix set value $(suffix)
-$execute store result storage multitag:runtime user_id int 1 run data get entity $(target) UUID[0]
+# Prepara y aplica el suffix de un jugador.
+# Macros de entrada (desde dialog / comando): $(target), $(suffix)
+# macro_id NO se declara como placeholder aqui; se calcula en runtime
+# y se pasa a do_suffix mediante with storage para que llegue como macro valida.
+$execute store result storage multitag:runtime macro_id int 1 run data get entity $(target) UUID[0]
 $data modify storage multitag:runtime target set value $(target)
-
-$execute as @a[name="$(target)"] run function multitag:admin/apply_suffix with entity @s
-function multitag:external-storage/save-user-data with storage multitag:runtime
+$data modify storage multitag:runtime suffix set value $(suffix)
+function multitag:admin/do_suffix with storage multitag:runtime

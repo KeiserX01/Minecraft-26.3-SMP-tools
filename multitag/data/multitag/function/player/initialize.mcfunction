@@ -1,7 +1,6 @@
-# team
-data modify storage multitag:runtime team_id set value 0
-execute store result storage multitag:runtime team_id int 1 run data get entity @s UUID[0]
-data modify storage multitag:runtime prefix set from storage multitag:config default.prefix
-data modify storage multitag:runtime suffix set from storage multitag:config default.suffix
-function multitag:player/apply_team with storage multitag:runtime
-data modify storage multitag:runtime team_id set value 0
+# Restaura o inicializa prefix y suffix de un jugador al cargar/unirse.
+# macro_id se calcula en runtime y se pasa a do_initialize mediante with storage
+# para que llegue como macro valida.
+execute store result storage multitag:runtime macro_id int 1 run data get entity @s UUID[0]
+function multitag:player/do_initialize with storage multitag:runtime
+data modify storage multitag:runtime macro_id set value 0

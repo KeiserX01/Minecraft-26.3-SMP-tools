@@ -7,4 +7,3 @@ data modify storage user-profile:runtime macro_id set from entity @s UUID[0]
 
 function user-profile:macros/intermidiate/merge-userdata_int with storage user-profile:runtime
 function user-profile:macros/ind-userdata_macro with storage user-profile:runtime
-say "start funciona"

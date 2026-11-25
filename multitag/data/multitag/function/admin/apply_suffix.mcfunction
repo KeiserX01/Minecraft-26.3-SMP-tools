@@ -1,3 +1,4 @@
-execute store result storage multitag:runtime team_id int 1 run data get entity @s UUID[0]
-function multitag:admin/write_suffix with storage multitag:runtime
-data modify storage multitag:runtime team_id set value 0
+# Aplica el suffix guardado en storage individual al equipo del jugador.
+# Macros requeridas (desde storage multitag:user<macro_id>):
+#   $(macro_id), $(suffix)
+$function multitag:admin/write_suffix with storage multitag:user$(macro_id)
